@@ -434,8 +434,8 @@ GC_INNER void GC_push_all_stacks(void)
 
   mach_port_deallocate(my_task, my_thread);
   GC_VERBOSE_LOG_PRINTF("Pushed %d thread stacks\n", nthreads);
-  if (!found_me && !GC_in_thread_creation)
-    ABORT("Collecting from unknown thread");
+  // if (!found_me && !GC_in_thread_creation)
+  //   ABORT("Collecting from unknown thread");
   GC_total_stacksize = total_size;
 }
 

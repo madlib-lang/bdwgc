@@ -1013,8 +1013,8 @@ GC_INNER void GC_push_all_stacks(void)
                           GC_win32_dll_threads ?
                                 " based on DllMain thread tracking" : "");
 # endif
-  if (!found_me && !GC_in_thread_creation)
-    ABORT("Collecting from unknown thread");
+  // if (!found_me && !GC_in_thread_creation)
+  //   ABORT("Collecting from unknown thread");
   GC_total_stacksize = total_size;
 }
 
